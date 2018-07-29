@@ -153,7 +153,10 @@ Docker Hub repository is named equivalently. If you don't define either
 of the variables from step 3. for the Docker credentials, your image
 will build but not be pushed to Docker Hub. Finally, if you don't define
 the `REPO_NAME` it will again use the name of the repository defined for
-the `CONTAINER_NAME`.
+the `CONTAINER_NAME`. As a quick sanity check, here are the variables you
+should have defined in your CircleCI settings.
+
+![img/envars.png](img/envars.png)
 
 ### Step 6. Push and Deploy!
 
