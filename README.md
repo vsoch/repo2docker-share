@@ -5,7 +5,10 @@ of a repo2docker container, with integration for a
 [containershare](https://vsoch.github.io/containershare) registry. In a nutshell, when you add the configuration files here to your repository and connect to continuous integration, you will get a container, Github pages to serve metadata with complete manifest and inspection of your containers. It's a completely free, transparent, and open source way to practice reproducible science. 
 
 <img src="https://vsoch.github.io/lessons/assets/img/logo-book.png" width="100px">
-<small>containershare is produced by @vsoch and supported by Stanford Research Computing Center</small>
+
+## Contributors
+
+> <@vsoch:Stanford Research Computing Center>
 
 # Overview
 This template will let you do the following:
