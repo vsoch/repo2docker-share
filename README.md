@@ -4,7 +4,9 @@ This is the continuous build repository template, intended for build->test->depl
 of a repo2docker container, with integration for a 
 [containershare](https://vsoch.github.io/containershare) registry. In a nutshell, when you add the configuration files here to your repository and connect to continuous integration, you will get a container, Github pages to serve metadata with complete manifest and inspection of your containers. It's a completely free, transparent, and open source way to practice reproducible science. 
 
+<a href="https://www.github.com/vsoch/containershare" target="_blank">
 <img src="https://vsoch.github.io/lessons/assets/img/logo-book.png" width="100px">
+</a>
 
 ## Contributors
 
