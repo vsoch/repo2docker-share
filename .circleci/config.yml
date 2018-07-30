@@ -253,12 +253,16 @@ jobs:
                     git checkout gh-pages || git checkout --orphan gh-pages
                     # Save all previous tags, so we don't pull and re-generate
                     mkdir -p ../out-old
-                    cp *.json ../out-old/
+                    if ls *.json 1> /dev/null 2>&1; then
+                        cp *.json ../out-old/
+                    fi
                     git rm -rf .
                     # ensure that github pages are ignored
                     mkdir -p .circleci && cp -a ../.circleci/. .circleci/.
                     # Copy back previous files
-                    cp ../out-old/*.json ${PWD}
+                    if ls ../out-old/*.json 1> /dev/null 2>&1; then
+                        cp ../out-old/*.json ${PWD}
+                    fi
                     cp .circleci/template.html template.html
                     # replace container name in index.html
                     envsubst < template.html > index.html
