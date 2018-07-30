@@ -110,6 +110,14 @@ Pushing content back to Github pages requires a deploy key. Although Circle will
  5.  Click on "Add Projects", and select your regular Github username under "Choose Organization". This is the owner of the project.  Then click "Follow Project" next to the repository name on the left of the menu. 
  6. This is important! Once followed, go to the Project Settings -> "Checkout SSH keys", and click on the button to "Authorize with GitHub." You will be taken back to Github, signed in as the machine user, and you should click "Authorize Application." Finally, click the Create and add machine user github name key button on the same page.
 
+**Generate Key**
+Follow the instructions [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key) to generate a new ssh key. The steps to add it to your project are a little weird, but I'll try to be specific:
+
+ - your machine user must first be added as a collaborator to the project
+ - you must then log in to CircleCI with your **machine user** and click on Jobs to see the project
+ - when you see it, click on any of the steps and click on "Follow Project" in the upper right
+ - Under the project settings (gear icon in the upper right) under "Permissions" click on "Checkout SSH keys" and then click the button to "Add user key." If you don't do this, it will give you an error that the key is read only.
+
 The final step is to edit the [.circleci/config.yml](.circleci/config.yml) file to add your ssh key for circle to find. See the section that looks like this?
 
 ```yaml
